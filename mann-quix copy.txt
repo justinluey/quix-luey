@@ -1,0 +1,58 @@
+> TITLE:    mann-quix.txt
+> REMARKS:  Hello, world. 
+>           Under construction. 
+>           Dilute! Dilute!
+> NOW:      2011-03-14_05-40-47
+> GITHUB:   http://github.com/merlinmann/quix-mann
+> MORE:     http://quixapp.com
+@Merlin Mann's Custom Quix Commands
+@Go nuts.
+aa          javascript:document.getElementsByTagName('head')[0].appendChild(document.createElement('script')).setAttribute('src','http://dl.dropbox.com/u/3423/scripts/AardvarkBookmarklet.js') Clean up page at this URL with Aardvark
+bit         javascript:var%20e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('src','http://bit.ly/bookmarklet/load.js');document.body.appendChild(e);void(0);  Make a bit.ly link for this URL
+bq          javascript:var%20b=document.body;if(b&&!document.xmlVersion){void(z=document.createElement('script'));void(z.src='http://www.boxee.tv/bookmarklet');void(b.appendChild(z));}else{} Add video from this URL to Boxee queue
+bt          javascript:location.href='http://backtweets.com/search?q='+encodeURIComponent(location.href) Backtweets links for this URL
+cal         javascript:var%20s;if(window.getSelection){s=window.getSelection();}else{s=document.selection.createRange().text;}var%20t=prompt('Please%20enter%20a%20description%20for%20the%20event',s);if(t){void(window.open(encodeURI('http://www.google.com/calendar/event?ctext='+t+'&action=TEMPLATE&pprop=HowCreated%3AQUICKADD'),'gcal'));}else{void(s);} Google Calendar: Add event via KEYWORDS 
+clip        http://cl1p.net/%s Make a new cl1p.net page from KEYWORDS
+down        http://downforeveryoneorjustme.com/%d Is this DOMAIN downforeveryoneorjustme?
+eye         javascript:void(window.open('http://tineye.com/search?pluginver=bookmark_1.0&url='%20+%20encodeURIComponent(document.URL)));  TinyEye: Where's an image on this URL from?
+g           g%r GoodReader, send URL for this page to; [iPhone]
+gma         https://mail.google.com/mail/s/#tl/search/%s Search Gmail using KEYWORDS (w/o having to see the accursed INBOX)
+gmm         https://mail.google.com/mail/mu/#tl/search/%s Search mobile Gmail using KEYWORDS (w/o having to see the accursed INBOX)
+hand        javascript:function%20setTitle(title){document.title=unescape(title);}function%20getUserSelection(){if(window.getSelection){return%20window.getSelection().toString();}else{if(document.selection.createRange){var%20range=document.selection.createRange();return%20range.text;}}}function%20getOverrideUrl(){var%20domain=document.domain;if(/^(maps|local)\.google/.test(domain)){var%20link=document.getElementById('link');return%20link&&link.href;}}function%20handoff(){function%20getFavicon(){var%20head=document.getElementsByTagName('head')[0];var%20links=head&&head.getElementsByTagName('link');if(!links){return;}var%20i=links.length;var%20link;do{link=links[0];if(!link){return;}if(link.type=='image/x-icon'){return%20link.href;}}while(i--);}var%20oldTitle=document.title;try{if(!document.body){alert('Can\'t%20handoff%20a%20page%20until%20it%20has%20fully%20loaded.');}document.title='Handing%20off%20'+document.title;var%20siteUrl=getOverrideUrl();if(!siteUrl){siteUrl=document.location.href;}var%20url='https://www.handoffapp.com/urls/create_url?format=js';url+='&url='+encodeURIComponent(siteUrl);url+='&title='+encodeURIComponent(oldTitle);var%20selection=getUserSelection();if(selection){url+='&_json='+encodeURIComponent(selection);}var%20favicon=getFavicon();if(favicon){url+='&favicon_path='+encodeURIComponent(favicon);}url+='&user_credentials='+encodeURIComponent('qeq2x94KSubI0KTGpv8');var%20scriptElement=document.createElement('script');scriptElement.setAttribute('src',url);document.body.appendChild(scriptElement);setTimeout('setTitle(\''+escape(oldTitle)+'\');',1000);}catch(exception){document.title='Error%20'+document.title;setTimeout('setTitle(\''+escape(oldTitle)+'\');',1500);}};handoff(); Handoff to all devices
+sub         javascript:var%20b=document.body;if(b){void(z=document.createElement('script'));void(z.src='http://www.google.com/reader/ui/subscribe-bookmarklet.js');void(b.appendChild(z));}else{location='http://www.google.com/reader/view/feed/'+encodeURIComponent(location.href)} Subscribe to an RSS feed associated with this URL in Google Reader
+hd          javascript:var%20w=window.open('http://huffduffer.com/add?popup=true&page='+encodeURIComponent(location.href),'huffduff','scrollbars=1,status=0,resizable=1,location=0,toolbar=0,width=360,height=480'); Huffduff
+ltweet      tweetie:%5B%t%5D%28%r%29  Send this URL to Tweetie
+md          javascript:location.href='http://heckyesmarkdown.com/go/?read=1&preview=0&showframe=1&u='+encodeURIComponent(document.location.href);  URL to Markdown via Brett Terpstra awesomeness. More at "Heck Yes Markdown" - http://heckyesmarkdown.com/
+mdown       javascript:location.href='http://www.aaronsw.com/2002/html2text/?url='+document.location.href;  Transform this page at this URL into Markdown
+mob         javascript:function%20iptxt(){var%20d=document;try{if(!d.body)throw(0);window.location='http://www.instapaper.com/text?u='+encodeURIComponent(d.location.href);}catch(e){alert('Please%20wait%20until%20the%20page%20has%20loaded.');}}iptxt();void(0)  Make URL page into purty Instapaper mobile style
+of          javascript:window.location='omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title) Send this URL to OmniFocus
+pb          javascript:if(document.getSelection){s=document.getSelection();}else{s='';};document.location='http://pinboard.in/add?next=same&url='+encodeURIComponent(location.href)+'&description='+encodeURIComponent(s)+'&title='+encodeURIComponent(document.title) Pinboard the URL for this page - use same page
+pbl         javascript:q=location.href;p=document.title;void(t=open('http://pinboard.in/add?later=yes&noui=yes&jump=close&url='+encodeURIComponent(q)+'&title='+encodeURIComponent(p),'Pinboard','toolbar=no,width=100,height=100'));t.blur();  Silently Pinboard the URL for this page (aka, 'read later')
+pbt         javascript:q=location.href;p=document.title;void(t=open('http://pinboard.in/add?later=yes&noui=yes&tags=%s&jump=close&url='+encodeURIComponent(q)+'&title='+encodeURIComponent(p),'Pinboard','toolbar=no,width=100,height=100'));t.blur();  silently Pinboard the URL for this page with these KEYWORDS as tags; (note that this is totally badass)
+qt          http://www.tumblr.com/new/text?post[state]=2  Tumblr: Add new text post to queue
+qv          http://www.tumblr.com/new/video?post[state]=2  Tumblr: Add new video post to queue
+read        javascript:(function(){readConvertLinksToFootnotes=true;readStyle='style-newspaper';readSize='size-large';readMargin='margin-medium';_readability_script=document.createElement('script');_readability_script.type='text/javascript';_readability_script.src='http://lab.arc90.com/experiments/readability/js/readability.js?x='+(Math.random());document.documentElement.appendChild(_readability_script);_readability_css=document.createElement('link');_readability_css.rel='stylesheet';_readability_css.href='http://lab.arc90.com/experiments/readability/css/readability.css';_readability_css.type='text/css';_readability_css.media='all';document.documentElement.appendChild(_readability_css);_readability_print_css=document.createElement('link');_readability_print_css.rel='stylesheet';_readability_print_css.href='http://lab.arc90.com/experiments/readability/css/readability-print.css';_readability_print_css.media='print';_readability_print_css.type='text/css';document.getElementsByTagName('head')[0].appendChild(_readability_print_css);})(); Readability (Style:Newspaper | Size:Large Margin:Medium Convert hyperlinks to footnotes)
+sfpl        http://sflib1.sfpl.org/search/X?SEARCH=%s&searchscope=1&p=&Da=&Db=&SORT=D Library Search Search the SF Public Library
+tweet       http://backtweets.com/search?q=%s Show BackTweets on this URL
+twit        http://search.twitter.com/search?q=%s Search Twitter for this
+url         javascript:(function(){document.body.appendChild(document.createElement('script')).src='http://urli.st/dyn/js/bookmarklet.js?'+Math.random();})(); URLize this URL
+@Text tools (by Roberto Mateu)
+> Roberto Mateu's Markdown and text manipulation tools
+> Many thanks to [Roberto Mateu](http://5typos.net/) for
+> 1. His awesome Markdown bookmarklets
+> 2. His kind [acknowledgment](http://5typos.net/post/259552063/bookmarklets-for-text-manipulation) of my [KFG link](##)
+> 3. His sharing the five bookmarklets in a manner that has made it so trivially easy to copy and paste, per below
+ml          javascript:(function(s){try{s=document.selection.createRange().text}catch(_){s=document.getSelection()}prompt('Markdown%20Link','['+s+']('+location+')')})();void(0)                        Copy selected text as Markdown link
+mt          javascript:(function(s){try{s=document.selection.createRange().text}catch(_){s=document.getSelection()}prompt('Markdown%20Title','['+document.title+']('+location+')')})();void(0)            Copy title as Markdown link
+mu          javascript:(function(s){try{s=document.selection.createRange().text}catch(_){s=document.getSelection()}prompt('Markdown%20URL','('+location+')')})();void(0)                                URL as markdown link
+mc          javascript:(function(s){try{s=document.selection.createRange().text}catch(_){s=document.getSelection()}prompt('Markdown%20Copy','['+document.title+']('+location+')\n\n>'+s)})();void(0)    Copy selected text as quote with title URL in markdown
+tc          javascript:(function(s){try{s=document.selection.createRange().text}catch(_){s=document.getSelection()}prompt('',document.title+'\n'+location+'\n'+s)})();void(0)   Page title, URL and selection
+> [Merlin's dumb reminder on what does what]
+> Source: [Quix Syntax - Quix](http://quixapp.com/help/syntax/)
+>> Replacement tokens
+>> In your executables you can use replacement tokens, currently, Quix supports the following tokens:
+>> %s        Replaced by any search terms that were entered after the command and / or any text that was selected when the command was issued. There’s a special case of this: %s_, this does the same except that it replaces spaces with underscores ( _ ) instead of plus signs, this is used in the Wikipedia command in the example file.
+>> %r        Replaced by the URL you were on when the command was issued.
+>> %rs       Replaced by a bit.ly shortened version of the URL you were on when the command was issued.
+>> %d        Replaced by the domain you were on when the command was issued.
+>> %t        Replaced by the title of the page you were on when the command was issued.
