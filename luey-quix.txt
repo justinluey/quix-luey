@@ -1,4 +1,16 @@
-> TITLE:    luey-quix.txt
-of	javascript:(function()%7Bvar%20w=window,d=document,selectedTxt=w.getSelection?w.getSelection():(d.getSelection)?d.getSelection():(d.selection?d.selection.createRange().text:0),pageUri=w.location.href,isGMail=w.location.host.match(/mail%5C.google%5C.com/),subject=d.title,source,url;if(isGMail)%7Bvar%20msgFrm=d.getElementById('canvas_frame'),subjectSpans;if(msgFrm)%7BsubjectSpans=msgFrm.contentDocument.getElementsByClassName('hP');if(subjectSpans)subject=subjectSpans%5B0%5D.innerText;%7D;if(!subjectSpans)%7Bsubject=d.title.substring(d.title.indexOf('-')+1,d.title.lastIndexOf('-')).replace(/%5E%20+/,'').replace(/%20+%24/,'')%7D;source='From:%20email%20subject:('+subject+')%5Cn';%7Delse%7Bsource='From:%20'%7Dif(selectedTxt)selectedTxt+='%5Cn';url='omnifocus:///add?note='+encodeURIComponent(selectedTxt+source+'%3C'+pageUri+'%3E')+'&name='+encodeURIComponent(subject);w.location.href=url%7D)();
-pin	javascript:q=location.href;if(document.getSelection)%7Bd=document.getSelection();%7Delse%7Bd='';%7D;p=document.title;void(open('https://pinboard.in/add?showtags=yes&url='+encodeURIComponent(q)+'&description='+encodeURIComponent(d)+'&title='+encodeURIComponent(p),'Pinboard','toolbar=no,scrollbars=yes,width=750,height=700'));
-in	javascript:function%20iprl5()%7Bvar%20d=document,z=d.createElement('scr'+'ipt'),b=d.body;try%7Bif(!b)throw(0);d.title='(Saving...)%20'+d.title;z.setAttribute('src','http://www.instapaper.com/j/PFu32kwZFLuP?u='+encodeURIComponent(d.location.href)+'&t='+(new%20Date().getTime()));b.appendChild(z);%7Dcatch(e)%7Balert('Please%20wait%20until%20the%20page%20has%20loaded.');%7D%7Diprl5();void(0)
+> Justin Luey's Custom Quix Commands
+> TITLE:        quix.txt
+> REMARKS:      Based On Merlin Mann's Quix File on GitHub. Thanks Merlin
+> GITHUB:       http://gist.github.com/290059
+> MORE:         http://quixapp.com
+> UPDATED:      February 10, 2013   
+@Justin Luey's Custom Quix Commands
+
+shop  		omnifocus:///task/kF-1_JBvcym OmniFocus Shopping List
+pin				javascript:window.location='pinbook://x-callback-url/add?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title)+'&x-source=Safari&x-success='+encodeURIComponent(location.href)+'&x-cancel='+encodeURIComponent(location.href)  Pinbook
+bit             javascript:var%20e=document.createElement('script');e.setAttribute('language','javascript');e.setAttribute('src','http://bit.ly/bookmarklet/load.js');document.body.appendChild(e);void(0);  Make a bit.ly link
+down            http://downforeveryoneorjustme.com/%d Is this site downforeveryoneorjustme?
+eye             javascript:void(window.open('http://www.tineye.com/search?pluginver=bookmark_1.0&url='+encodeURIComponent(document.URL)));  TinyEye: Where's this image from?
+of              javascript:window.location='omnifocus:///add?note='+encodeURIComponent(window.location)+'&name='+encodeURIComponent(document.title) Send to OmniFocus
+1p				javascript:window.location='op'+(window.location.href); Open current page in 1p
+tb				javascript:window.location='tweetbot:///post?text='+encodeURIComponent(document.title)+'%20-%20'+encodeURIComponent(window.location) Tweetbot
